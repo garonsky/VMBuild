@@ -80,7 +80,7 @@ then
 /vagrant/{{WSSQL_PACKAGE}}
     /opt/HPCCSystems/bin/hpcc-nagios-tools -s -env /etc/HPCCSystems/environment.xml -enable_host_notify -enable_service_notify -disable_check_all_disks -out /etc/nagios3/conf.d/hpcc_services.cfg
     /opt/HPCCSystems/bin/hpcc-nagios-tools -g -env /etc/HPCCSystems/environment.xml -out /etc/nagios3/conf.d/hpcc_hostgroups.cfg
-    /opt/HPCCSystems/bin/hpcc-nagios-tools -ec -env /etc/HPCCSystems/environment.xml -out -set_url localhost/nagios3 /etc/nagios3/conf.d/hpcc_escalations.cfg
+    /opt/HPCCSystems/bin/hpcc-nagios-tools -ec -env /etc/HPCCSystems/environment.xml -set_url localhost/nagios3 -out /etc/nagios3/conf.d/hpcc_escalations.cfg
     /etc/init.d/nagios-nrpe-server restart
     /etc/init.d/nagios3 restart
 fi
